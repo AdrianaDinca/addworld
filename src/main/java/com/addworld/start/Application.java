@@ -12,6 +12,8 @@ public class Application {
 		//basic bean dependency test
 		//TestXMLBeanDependency.testXMLBeanDependency(context);
 		
+		//connect to db via mysql jdbc driver
+		//TestJDBCConnection.testJdbcConnection();
 	}
 
 }
