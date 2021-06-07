@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="addworldAgencyRepo" class="com.addworld.repositories.AddworldAgencyRepository"/>
+	
+	<bean id = "nonTechnicalAgencyLocator" class="com.addworld.services.NonTechnicalAgencyLocator">
+		<property name="repository" ref="addworldAgencyRepo"></property>
+	</bean>
+	
+	<bean id="bookingAgencyService" class="com.addworld.services.BookingAgencyService">
+		<constructor-arg ref="nonTechnicalAgencyLocator"/>
+	</bean>
+	
+</beans>
