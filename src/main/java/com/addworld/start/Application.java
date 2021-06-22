@@ -14,6 +14,8 @@ public class Application {
 		
 		//use datasource
 		//TestSpringJDBCDataSource.testSpringJdbcDataSource();
+		
+		//use jdbc template
 		TestJDBCTemplate.testJDBCTemplate();
 		
 	
