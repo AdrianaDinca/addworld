@@ -1,28 +1,27 @@
 package com.addworld.services;
 
 import com.addworld.data.entities.AddworldAgency;
-import com.addworld.repositories.AddworldAgencyRepository;
 
 public class NonTechnicalAgencyLocator implements AddworldAgencyLocator {
 	
-	private AddworldAgencyRepository repository;
+	private AddworldAgencyCacheService agencyCacheService;
 	
 	
-	public AddworldAgencyRepository getRepository() {
-		return repository;
+	public AddworldAgencyCacheService getAgencyCacheService() {
+		return agencyCacheService;
 	}
 
 
 
-	public void setRepository(AddworldAgencyRepository repository) {
-		this.repository = repository;
+	public void setAgencyCacheService(AddworldAgencyCacheService agencyCacheService) {
+		this.agencyCacheService = agencyCacheService;
 	}
 
 
 
 	public AddworldAgency findAgencyByLocation(String agencyLocation) {
 		
-		for(AddworldAgency agency: repository.getAllAddworldAgencies()) {
+		for(AddworldAgency agency: agencyCacheService.getAllAddworldAgencies()) {
 			if (agency.getCity().equals(agencyLocation)) {
 				return agency;
 			}

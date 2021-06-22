@@ -1,19 +1,22 @@
 package com.addworld.start;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.addworld.tests.TestJDBCTemplate;
 
 public class Application {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-		
 		//basic bean dependency test
-		//TestXMLBeanDependency.testXMLBeanDependency(context);
+		//TestXMLBeanDependency.testXMLBeanDependency();
 		
 		//connect to db via mysql jdbc driver
 		//TestJDBCConnection.testJdbcConnection();
+		
+		//use datasource
+		//TestSpringJDBCDataSource.testSpringJdbcDataSource();
+		TestJDBCTemplate.testJDBCTemplate();
+		
+	
 	}
 
 }

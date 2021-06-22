@@ -1,4 +1,4 @@
-package com.addworld.repositories;
+package com.addworld.services;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 
 import com.addworld.data.entities.AddworldAgency;
 
-public class AddworldAgencyRepository {
+public class AddworldAgencyCacheService {
 	private Map<Integer, AddworldAgency> agencyMap = new HashMap<Integer, AddworldAgency>();
 	
 	
@@ -22,5 +22,4 @@ public class AddworldAgencyRepository {
 	public List<AddworldAgency> getAllAddworldAgencies() {
 		return new ArrayList(agencyMap.values());
 	}
-	
 }
