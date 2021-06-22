@@ -1,16 +1,28 @@
 package com.addworld.data.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ADDWORLD_PROJECT")
 public class AddworldProject {
-	
-	public enum Status {
-		TODO,
-		IN_PROGRESS,
-		DONE
-	}
-	
+
+	@Id
+	@Column(name="PROJECT_ID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer projectId;
+
+	@Column(name="NAME")
 	private String name;
+
+	@Column(name="STATUS")
 	private String status;
+
+	@Column(name="TEAM_ID")
 	private Integer teamId;
 	
 	public Integer getProjectId() {
@@ -37,5 +49,11 @@ public class AddworldProject {
 	public void setTeamId(Integer teamId) {
 		this.teamId = teamId;
 	}
+	@Override
+	public String toString() {
+		return "AddworldProject [projectId=" + projectId + ", name=" + name + ", status=" + status + ", teamId="
+				+ teamId + "]";
+	}
+	
 	
 }

@@ -2,7 +2,7 @@ package com.addworld.data.repositories;
 
 import com.addworld.data.entities.AddworldProject;
 
-public class AddworldProjectRepositoryImpl implements AddworldProjectRepository{
+public class AddworldProjectRepositoryImpl {
 
 	public void insert(AddworldProject element) {
 	}

@@ -1,6 +1,7 @@
 package com.addworld.start;
 
 import com.addworld.tests.TestJDBCTemplate;
+import com.addworld.tests.TestJPA;
 
 public class Application {
 	
@@ -16,8 +17,10 @@ public class Application {
 		//TestSpringJDBCDataSource.testSpringJdbcDataSource();
 		
 		//use jdbc template
-		TestJDBCTemplate.testJDBCTemplate();
+		//TestJDBCTemplate.testJDBCTemplate();
 		
+		
+		TestJPA.testJPA();
 	
 	}
 
