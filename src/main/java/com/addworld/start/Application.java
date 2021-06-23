@@ -2,6 +2,7 @@ package com.addworld.start;
 
 import com.addworld.tests.TestJDBCTemplate;
 import com.addworld.tests.TestJPA;
+import com.addworld.tests.TestScopeBeanInjectionProblem;
 
 public class Application {
 	
@@ -19,9 +20,16 @@ public class Application {
 		//use jdbc template
 		//TestJDBCTemplate.testJDBCTemplate();
 		
-		
-		TestJPA.testJPA();
+		//test jpa
+		//TestJPA.testJPA();
 	
+		//test scoped bean injection problem with scoped proxy
+		//TestScopeBeanInjectionProblem.testScopedProxy();
+		
+		//test scoped bean injection problem with java.util.Function
+		TestScopeBeanInjectionProblem.testFunction();
+		
+		
 	}
 
 }
